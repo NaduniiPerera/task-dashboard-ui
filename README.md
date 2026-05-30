@@ -26,6 +26,7 @@ https://idyllic-horse-c2284e.netlify.app/
 * Local Storage
 * Git and GitHub
 * Netlify deployment
+* Vitest for unit testing
 
 ## Main Features
 
@@ -45,6 +46,7 @@ https://idyllic-horse-c2284e.netlify.app/
 * Optimistic UI updates
 * Dark mode toggle with localStorage persistence
 * Responsive layout for mobile and desktop screens
+* Unit tests for task utility functions
 
 ## Backend API Requirement
 
@@ -216,7 +218,30 @@ public/screenshots
 
 * Dark mode toggle with localStorage persistence: Completed
 * Deployment to a live URL: Completed
-* Unit tests: Not included
+* Unit tests using Vitest: Completed
+
+## Unit Tests
+
+This project includes unit tests for task utility functions using Vitest.
+
+Run tests:
+
+```bash
+npm run test
+```
+
+Tested utility features:
+
+* Filtering tasks by status and priority
+* Validating task form input
+* Formatting readable task status labels
+
+Current test status:
+
+```txt
+Test Files  1 passed
+Tests       3 passed
+```
 
 ## Build Command
 

@@ -1,4 +1,4 @@
-# Task Dashboard UI
+ Task Dashboard UI
 
 This is the frontend application for the Task Management System developed for the Bloomtech Junior Web Developer Intern Technical Assessment.
 
@@ -6,13 +6,13 @@ The application is built using React, TypeScript, Vite, and Tailwind CSS. It con
 
 ## GitHub Repositories
 
-Backend API Repository:
+Backend API Repository:  
 https://github.com/NaduniiPerera/task-management-api
 
-Frontend UI Repository:
+Frontend UI Repository:  
 https://github.com/NaduniiPerera/task-dashboard-ui
 
-Live Deployed URL:
+Live Deployed URL:  
 https://idyllic-horse-c2284e.netlify.app/
 
 ## Technologies Used
@@ -55,67 +55,48 @@ This frontend connects to the Lab 1 backend API running at:
 
 ```txt
 http://localhost:3000
-```
 
 The backend must be running before using this frontend locally.
 
 Backend repository:
 
-```txt
 https://github.com/NaduniiPerera/task-management-api
-```
 
 Backend start commands:
 
-```bash
 cd "D:\Task Management API"
 npm install
 npm start
-```
 
 Expected backend output:
 
-```txt
 Server is running on port 3000
-```
-
-## Frontend Setup Instructions
+Frontend Setup Instructions
 
 Clone the frontend repository:
 
-```bash
 git clone https://github.com/NaduniiPerera/task-dashboard-ui.git
-```
 
 Go into the project folder:
 
-```bash
 cd task-dashboard-ui
-```
 
 Install dependencies:
 
-```bash
 npm install
-```
 
 Run the frontend:
 
-```bash
 npm run dev
-```
 
 Open the application in the browser:
 
-```txt
 http://localhost:5173
-```
-
-## How to Use the Application Locally
+How to Use the Application Locally
 
 First, start the Lab 1 backend API server on port 3000.
 
-Then start the Lab 2 frontend using `npm run dev`.
+Then start the Lab 2 frontend using npm run dev.
 
 Create a new account using the register form or log in with an existing account.
 
@@ -123,24 +104,20 @@ After registration or login, the user is taken to the dashboard, where the logge
 
 Users can add, edit, delete, filter, and view tasks in both list view and Kanban view.
 
-## API Endpoints Used
+API Endpoints Used
 
 The frontend uses the following backend endpoints:
 
-```txt
 POST /auth/register
 POST /auth/login
 GET /tasks
 POST /tasks
 PUT /tasks/:id
 DELETE /tasks/:id
-```
-
-## Task Data Model
+Task Data Model
 
 Each task contains the following fields:
 
-```ts
 interface Task {
   id: string;
   title: string;
@@ -151,138 +128,93 @@ interface Task {
   updatedAt: string;
   categoryId?: string;
 }
-```
-
-## Screenshots
+Screenshots
 
 The screenshots below are stored in the project under:
 
-```txt
 public/screenshots
-```
+Login Page
 
-### Login Page
+Register Page
 
-![Login Page](public/screenshots/Loginpage.png)
+Dashboard List View
 
-### Register Page
+Add Task Modal
 
-![Register Page](public/screenshots/Registerpage.png)
+Edit Task Modal
 
-### Dashboard List View
+Delete Task Confirmation
 
-![Dashboard List View](public/screenshots/DashBoardPage.png)
+Kanban View
 
-### Add Task Modal
+Dark Mode
 
-![Add Task Modal](public/screenshots/Addtask.png)
-
-### Edit Task Modal
-
-![Edit Task Modal](public/screenshots/Edit%20task.png)
-
-### Delete Task Confirmation
-
-![Delete Task Confirmation](public/screenshots/Deletetask.png)
-
-### Kanban View
-
-![Kanban View](public/screenshots/Kanban%20view.png)
-
-### Dark Mode
-
-![Dark Mode](public/screenshots/DarkMode.png)
-
-## Assessment Requirement Coverage
-
-### Core Requirements
-
-* Task list view with card layout: Completed
-* Status badge with color coding: Completed
-* Priority and created date display: Completed
-* Filter bar for status and priority: Completed
-* Add task form using controlled inputs: Completed
-* Client-side validation before submission: Completed
-* Edit task using the same form component: Completed
-* Delete task with confirmation: Completed
-* Responsive layout for mobile and desktop: Completed
-
-### Intermediate Challenges
-
-* Kanban board view: Completed
-* Empty state component: Completed
-* TypeScript interfaces for data models: Completed
-* No `any` types used: Completed
-* Optimistic UI updates: Completed
-
-### Stretch Goals
-
-* Dark mode toggle with localStorage persistence: Completed
-* Deployment to a live URL: Completed
-* Unit tests using Vitest: Completed
-
-## Unit Tests
+Assessment Requirement Coverage
+Core Requirements
+Task list view with card layout: Completed
+Status badge with color coding: Completed
+Priority and created date display: Completed
+Filter bar for status and priority: Completed
+Add task form using controlled inputs: Completed
+Client-side validation before submission: Completed
+Edit task using the same form component: Completed
+Delete task with confirmation: Completed
+Responsive layout for mobile and desktop: Completed
+Intermediate Challenges
+Kanban board view: Completed
+Empty state component: Completed
+TypeScript interfaces for data models: Completed
+No any types used: Completed
+Optimistic UI updates: Completed
+Stretch Goals
+Dark mode toggle with localStorage persistence: Completed
+Deployment to a live URL: Completed
+Unit tests using Vitest: Completed
+Unit Tests
 
 This project includes unit tests for task utility functions using Vitest.
 
 Run tests:
 
-```bash
 npm run test
-```
 
 Tested utility features:
 
-* Filtering tasks by status and priority
-* Validating task form input
-* Formatting readable task status labels
+Filtering tasks by status and priority
+Validating task form input
+Formatting readable task status labels
 
 Current test status:
 
-```txt
 Test Files  1 passed
 Tests       3 passed
-```
-
-## Build Command
+Build Command
 
 To create a production build:
 
-```bash
 npm run build
-```
 
 To preview the production build:
 
-```bash
 npm run preview
-```
-
-## Deployment
+Deployment
 
 The frontend is deployed using Netlify.
 
 Live URL:
 
-```txt
 https://idyllic-horse-c2284e.netlify.app/
-```
 
 Build settings used for deployment:
 
-```txt
 Build command: npm run build
 Publish directory: dist
-```
-
-## Important Note
+Important Note
 
 The deployed frontend opens online through Netlify. However, the full login, registration, and task management functionality depends on the backend API.
 
 For local testing, make sure the Lab 1 backend is running at:
 
-```txt
 http://localhost:3000
-```
 
 If the backend is not running, login, registration, and task operations will not work locally.

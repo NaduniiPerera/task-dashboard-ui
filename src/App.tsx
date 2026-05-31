@@ -32,6 +32,11 @@ interface AuthFormData {
 interface AuthResponse {
   token?: string;
   message?: string;
+  user?: {
+    id: string | number;
+    name: string;
+    email: string;
+  };
 }
 
 const API_BASE_URL = "http://localhost:3000";
@@ -63,6 +68,9 @@ function App() {
 
   const [authMode, setAuthMode] = useState<AuthMode>("login");
   const [token, setToken] = useState<string>(() => localStorage.getItem("token") || "");
+  const [userName, setUserName] = useState<string>(
+    () => localStorage.getItem("userName") || ""
+  );
 
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     return localStorage.getItem("darkMode") === "true";
@@ -188,6 +196,12 @@ function App() {
       }
 
       localStorage.setItem("token", data.token);
+
+      if (data.user?.name) {
+        localStorage.setItem("userName", data.user.name);
+        setUserName(data.user.name);
+      }
+
       setToken(data.token);
       setAuthForm(emptyAuthForm);
       setMessage("");
@@ -202,7 +216,9 @@ function App() {
 
   function logout() {
     localStorage.removeItem("token");
+    localStorage.removeItem("userName");
     setToken("");
+    setUserName("");
     setTasks([]);
     setMessage("Logged out successfully.");
   }
@@ -601,7 +617,11 @@ function App() {
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Task Dashboard</h1>
               <p className="mt-2 text-gray-600">
-                Manage your tasks using your Lab 1 REST API.
+                Welcome,{" "}
+                <span className="font-semibold text-gray-900">
+                  {userName || "User"}
+                </span>
+                . Manage your tasks using your Lab 1 REST API.
               </p>
             </div>
 

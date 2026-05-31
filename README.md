@@ -145,7 +145,7 @@ public/screenshots
 
 ### Dashboard List View
 
-![Dashboard List View](public/screenshots/DashBoardPage.png)
+![Dashboard List View](public/screenshots/DashboardPage.png)
 
 ### Add Task Modal
 
@@ -165,7 +165,7 @@ public/screenshots
 
 ### Dark Mode
 
-![Dark Mode](public/screenshots/DarkMode.png)
+![Dark Mode](public/screenshots/Darkmode.png)
 
 ## Assessment Requirement Coverage
 

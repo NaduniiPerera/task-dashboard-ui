@@ -145,7 +145,7 @@ public/screenshots
 
 ### Dashboard List View
 
-![Dashboard List View](public/screenshots/DashboardPage.png)
+![Dashboard List View](public/screenshots/Dashboardpage.png)
 
 ### Add Task Modal
 

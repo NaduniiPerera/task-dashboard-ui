@@ -31,6 +31,7 @@ https://idyllic-horse-c2284e.netlify.app/
 ## Main Features
 
 * User registration and login using JWT authentication
+* Logged-in user name display on the dashboard
 * Task list displayed in a responsive card layout
 * Color-coded status badges
 * Priority display for each task
@@ -116,9 +117,9 @@ First, start the Lab 1 backend API server on port 3000.
 
 Then start the Lab 2 frontend using `npm run dev`.
 
-Create a new account using the register form.
+Create a new account using the register form or log in with an existing account.
 
-After registration or login, the user can manage tasks from the dashboard.
+After registration or login, the user is taken to the dashboard, where the logged-in user name is displayed.
 
 Users can add, edit, delete, filter, and view tasks in both list view and Kanban view.
 
@@ -170,7 +171,7 @@ public/screenshots
 
 ### Dashboard List View
 
-![Dashboard List View](public/screenshots/Dashboardpage.png)
+![Dashboard List View](public/screenshots/DashBoardPage.png)
 
 ### Add Task Modal
 
@@ -190,7 +191,7 @@ public/screenshots
 
 ### Dark Mode
 
-![Dark Mode](public/screenshots/Darkmode.png)
+![Dark Mode](public/screenshots/DarkMode.png)
 
 ## Assessment Requirement Coverage
 
